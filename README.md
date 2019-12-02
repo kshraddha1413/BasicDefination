@@ -45,5 +45,23 @@ This also helps you in improving your code. On a lighter note,
 it is a great place to show off your projects and get noticed by potential recruiters.
 
 
+Source control (or version control) is the practice of tracking and managing
+changes to code/ documents.
+
+Source control management (SCM) systems provide
+
+a running history of code development and help to resolve conflicts when merging
+contributions from multiple sources.
+
+enables multiple people to simultaneously work on a single project. Each person
+edits his or her own copy of the files and chooses when to share those changes with
+the rest of the team. integrates work done simultaneously by different team
+members
+
+Version control gives access to historical versions of your project. This is insurance
+against computer crashes or data lossage.if you make a mistake you can rollback to previoius version of code
+
+**REST ful API**
+
 REST or RESTful API design (Representational State Transfer) is designed to take advantage of existing protocols. While REST can be used over nearly any protocol, 
 it usually takes advantage of HTTP methods GET,PUT,POST,DELETE.
