@@ -65,3 +65,8 @@ against computer crashes or data lossage.if you make a mistake you can rollback 
 
 REST or RESTful API design (Representational State Transfer) is designed to take advantage of existing protocols. While REST can be used over nearly any protocol, 
 it usually takes advantage of HTTP methods GET,PUT,POST,DELETE.
+
+REST stands for REpresentational State Transfer.
+It means when a RESTful API is called, the server will transfer to the client a representation of the state of the requested resource.
+For example, when a developer calls Instagram API to fetch a specific user (the resource), the API will return the state of that user, including their name, the number of posts that user posted on Instagram so far, how many followers they have, and more.
+The representation of the state can be in a JSON format, and probably for most APIs this is indeed the case. It can also be in XML or HTML format.
