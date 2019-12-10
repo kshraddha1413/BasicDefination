@@ -71,6 +71,7 @@ it usually takes advantage of HTTP methods GET,PUT,POST,DELETE.
 Rest API is stateless:
 stateless means server not holds the all information for request.client has to send all the information needed for server in every htttp request.
 https://restfulapi.net/statelessness/
+Statelessness means that every HTTP request happens in complete isolation. When the client makes an HTTP request, it includes all information necessary for the server to fulfill that request. The server never relies on information from previous requests. If that information was important, the client would have sent it again in this request.
 
 
 REST stands for REpresentational State Transfer.
