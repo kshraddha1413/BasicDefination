@@ -62,6 +62,9 @@ Version control gives access to historical versions of your project. This is ins
 against computer crashes or data lossage.if you make a mistake you can rollback to previoius version of code
 
 **REST ful API**
+REST - Representational state transfer
+It is architactural style as well as an apprroch of comminication purpose thats is often used by web service development .
+
 
 REST or RESTful API design (Representational State Transfer) is designed to take advantage of existing protocols. While REST can be used over nearly any protocol, 
 it usually takes advantage of HTTP methods GET,PUT,POST,DELETE.
