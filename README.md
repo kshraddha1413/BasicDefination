@@ -68,6 +68,10 @@ REST - Representational state transfer
 
 REST or RESTful API design (Representational State Transfer) is designed to take advantage of existing protocols. While REST can be used over nearly any protocol, 
 it usually takes advantage of HTTP methods GET,PUT,POST,DELETE.
+Rest API is stateless:
+stateless means server not holds the all information for request.client has to send all the information needed for server in every htttp request.
+https://restfulapi.net/statelessness/
+
 
 REST stands for REpresentational State Transfer.
 It means when a RESTful API is called, the server will transfer to the client a representation of the state of the requested resource.
