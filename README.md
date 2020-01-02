@@ -1,16 +1,7 @@
 **What is Spring Boot?**
 
-Spring Boot provides a good platform for Java developers to develop a stand-alone and production-grade spring application that you can just run. You can get started with minimum configurations without the need for an entire Spring configuration setup.
-
-Advantages
-
-Spring Boot offers the following advantages to its developers −
-
-Easy to understand and develop spring applications
-Increases productivity
-Reduces the development time
-
-
+1)Spring Boot provides a good platform for Java developers to develop a stand-alone and production-grade spring application that you can just run. 
+2)It gives us a starter and we have to download dependencies as per our requirement and  .You can start writing code  get with minimum configurations without the need for an entire Spring configuration setup. 
 Why Spring Boot?
 You can choose Spring Boot because of the features and benefits it offers as given here −
 
@@ -23,8 +14,24 @@ In Spring Boot, everything is auto configured; no manual configurations are need
 It offers annotation-based spring application
 
 Eases dependency management
+Advantages:
 
 It includes Embedded Servlet Container
+3)so reduces development time
+4)Increases Productivity
+5)Easy to understand and developed spring application
+
+
+Advantages
+
+Spring Boot offers the following advantages to its developers −
+
+Easy to understand and develop spring applications
+Increases productivity
+Reduces the development time
+
+
+
 
 How does it work?
 Spring Boot automatically configures your application based on the dependencies you have added to the project by using @EnableAutoConfiguration annotation. For example, if MySQL database is on your classpath, but you have not configured any database connection, then Spring Boot auto-configures an in-memory database.
