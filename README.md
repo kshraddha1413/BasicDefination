@@ -1,6 +1,11 @@
 **What is Spring Boot?**
 
+Spring Boot is an open source Java-based framework used to create a micro Service. It is used to build stand-alone and production ready spring applications.
+
+
 1)Spring Boot provides a good platform for Java developers to develop a stand-alone and production-grade spring application that you can just run.
+
+You can get started with minimum configurations without the need for an entire Spring configuration setup.
 
 
 **Features**
