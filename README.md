@@ -1,3 +1,11 @@
+
+**Microservice**
+
+A microservices architecture takes this same approach and extends it to the loosely coupled services which can be developed, deployed, and maintained independently. Each of these services is responsible for discrete task and can communicate with other services through simple APIs to solve a larger complex business problem.
+
+
+
+
 **What is Spring Boot?**
 
 Spring Boot is an open source Java-based framework used to create a micro Service. It is used to build stand-alone and production ready spring applications.
