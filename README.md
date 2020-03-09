@@ -1,3 +1,188 @@
+**SOLID** https://www.edureka.co/blog/solid-principles-in-java/
+1)**Single Responsiblity Principle**
+According to the single responsibility principle, there should be only one reason due to which a class has to be changed. It means that a class should have one task to do. for e.g. Imagine there is a class which performs following operations.
+
+
+public class task{
+   Public void connectToDB(String username, String pwd)();
+   public void readData(String tableName)();
+   public writeToFile(Sting fileName)();
+}
+there are too many reasons for the class to change; hence, it doesn’t fit properly in the single responsibility principle.
+
+why Single responsibily principle is required:
+1)It leads to better code organization since smaller and well-purposed classes are easier to search.
+2)When the Single Responsibility Principle is followed, testing is easier
+
+2)**Open Closed Principle**
+describes it as Software components should be open for extension, but closed for modification.
+For e.g.
+public class Rectangle
+{
+public double length;
+public double width;
+}
+public class AreaCalculator
+{
+  public double calculateRectangleArea(Rectangle rectangle)
+ {
+  return rectangle.length *rectangle.width;
+ }
+}
+public class Circle
+{
+public double radius;
+}
+public class AreaCalculator
+ 
+{
+   public double calculateRectangleArea(Rectangle rectangle)
+  {
+     return rectangle.length *rectangle.width;
+     }
+public double calculateCircleArea(Circle circle)
+ 
+    {
+return (22/7)*circle.radius*circle.radius;
+  }
+}
+Lets say we have a new shape pentagon. In that case, we will again end up modifying the AreaCalculator class. As the types of shapes grows this becomes messier as AreaCalculator keeps on changing.
+ As a result, AreaCalculator class will not be baselined(finalized) with surety as every time a new shape comes it will be modified. So, this design is not closed for modification.
+ 
+ Modification of above design to comply with opened/closed principle:
+ 
+ We will first of all make the design extensible. For this we need to first define a base type Shape and have Circle & Rectangle implement Shape interface.
+ 
+ public interface Shape
+{
+public double calculateArea();
+}
+ 
+public class Rectangle implements Shape
+{
+double length;
+double width;
+public double calculateArea()
+{
+return length * width;
+}
+}
+ 
+public class Circle implements Shape
+{
+public double radius;
+public double calculateArea()
+{
+return (22/7)*radius*radius;
+}
+}
+public class AreaCalculator
+{
+public double calculateShapeArea(Shape shape)
+{
+return shape.calculateArea();
+}
+}
+
+Why is that this principle is required?
+OCP is important since classes may come to us through third-party libraries. We should be able to extend those classes without worrying if those base classes can support our extensions. But inheritance may lead to subclasses which depend on base class implementation. To avoid this, use of interfaces is recommended. This additional abstraction leads to loose coupling.
+
+3)**Liskov Substitution Principle**
+describes it as Derived types must be completely substitutable for their base types.
+Why is that this principle is required?
+This avoids misusing inheritance. It helps us conform to the “is-a” relationship.
+The LSP is popularly explained using the square and rectangle example. if we assume an ISA relationship between Square and Rectangle. Thus, we call “Square is a Rectangle.” The code below represents the relationship.
+public class Rectangle
+{
+private int length;
+private int breadth;
+public int getLength()
+{
+return length;
+}
+public void setLength(int length)
+{
+this.length = length;
+}
+public int getBreadth()
+{
+return breadth;
+}
+public void setBreadth(int breadth)
+{
+this.breadth = breadth;
+}
+public int getArea()
+{
+return this.length * this.breadth;
+}
+}
+Below is the code for Square. Note that Square extends Rectangle.
+public class Square extends Rectangle
+{
+ 
+public void setBreadth(int breadth)
+{
+super.setBreadth(breadth);
+super.setLength(breadth);
+}
+ 
+public void setLength(int length)
+{
+super.setLength(length);
+super.setBreadth(length);
+}
+}
+public class LSPDemo
+{
+public void calculateArea(Rectangle r)
+{
+r.setBreadth(2);
+r.setLength(3);
+assert r.getArea() == 6 : printError("area", r);
+assert r.getLength() == 3 : printError("length", r);
+assert r.getBreadth() == 2 : printError("breadth", r);
+}
+private String printError(String errorIdentifer, Rectangle r)
+{
+return "Unexpected value of " + errorIdentifer + " for instance of " + r.getClass().getName();
+}
+public static void main(String[] args)
+{
+LSPDemo lsp = new LSPDemo();
+// An instance of Rectangle is passed
+lsp.calculateArea(new Rectangle());
+// An instance of Square is passed
+lsp.calculateArea(new Square());
+}
+}
+4)**Interface Segregation Principle**
+
+describes it as clients should not be forced to implement unnecessary methods which they will not use.
+
+5)**Dependency Inversion Principle:**
+   Depend upon abstractions (Interfaces) rather then on concrete classes
+
+Why is that this principle is required?
+It allows a programmer to remove hardcoded dependencies so that the application becomes loosely coupled and extendable.
+
+public class Student
+{
+   private Address address;
+   public Student()
+  {
+    address = new Address();
+   }
+}
+In the above example, Student class requires an Address object and it is responsible for initializing and using the Address object. If Address class is changed in future then we have to make changes in Student class also. This makes the tight coupling between Student and Address objects. We can resolve this problem using the dependency inversion design pattern. i.e. Address object will be implemented independently and will be provided to Student when Student is instantiated by using constructor-based or setter-based dependency inversion.
+
+
+
+
+
+
+
+
 
 **Microservice**
 
